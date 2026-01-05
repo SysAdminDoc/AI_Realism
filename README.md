@@ -9,9 +9,9 @@
 |:---|:---|
 | Turn a photo into a talking video | [The Core Pipeline](#-phase-1-the-image) → [Motion Control](#-kling-motion-control) → [Lip Sync](#-lip-synchronization) |
 | Make a music video | [Multi-Angle Technique](#multi-angle-music-video-workflow) |
-| Clone my voice for narration | [Voice Cloning](#-voice-cloning) |
+| Clone my voice for narration | [Voice Cloning](https://github.com/SysAdminDoc/AI_Realism?tab=readme-ov-file#%EF%B8%8F-voice-cloning) |
 | Fix a failed generation | [Repair & Salvage](#-repair--salvage) |
-| Understand what tools to use | [Tool Selector](#-tool-selector-by-task) |
+| Understand what tools to use | [Tool Selector](https://github.com/SysAdminDoc/AI_Realism?tab=readme-ov-file#%EF%B8%8F-tool-selector-by-task) |
 
 ---
 
