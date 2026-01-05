@@ -18,9 +18,16 @@
 8. [Music Generation](#music-generation)
 9. [Audio Processing](#audio-processing)
 10. [Upscaling for Distribution](#upscaling-for-distribution)
-11. [Editorial Assembly](#editorial-assembly)
-12. [Automation Pipelines](#automation-pipelines)
-13. [Practical Notes](#practical-notes)
+11. [Color and Frame Rate Discipline](#color-and-frame-rate-discipline)
+12. [Editorial Assembly](#editorial-assembly)
+13. [Surviving Social Platform Compression](#surviving-social-platform-compression)
+14. [Quality Control Protocol](#quality-control-protocol)
+15. [Legal and Identity Considerations](#legal-and-identity-considerations)
+16. [Metadata and Provenance](#metadata-and-provenance)
+17. [Storage and Version Control](#storage-and-version-control)
+18. [Automation Pipelines](#automation-pipelines)
+19. [Recognizing AI Video Limitations](#recognizing-ai-video-limitations)
+20. [Durable Principles](#durable-principles)
 
 ---
 
@@ -450,6 +457,30 @@ Detail recovery above zero causes facial morphing. Leave disabled without except
 
 ---
 
+## Color and Frame Rate Discipline
+
+Generation platforms disagree on color science, gamma curves, and temporal handling. Uncorrected, these mismatches produce flicker, banding, and perceptual drift that survives even aggressive grading.
+
+### Color Space Management
+
+Assume **Rec.709 gamma 2.4** unless a platform explicitly documents otherwise. Convert all clips into a unified working space before editorial begins.
+
+**Critical:** Never combine HDR and SDR sources without explicit tone mapping. The results fail silently until final review.
+
+**DaVinci Resolve configuration:**
+- Timeline color space: Rec.709 Gamma 2.4
+- Automatic color management: Disable unless you understand every transform in the chain
+
+### Temporal Consistency
+
+Generate all clips at identical frame rates—**24fps or 30fps**, never mixed. Avoid platform-native variable frame rate exports entirely.
+
+If motion appears jittery post-generation, apply optical flow retiming only after upscaling completes. Retiming before upscaling compounds interpolation artifacts.
+
+**Sequencing rule:** Establish frame rate before lip synchronization. Correcting timing after sync destroys alignment.
+
+---
+
 ## Editorial Assembly
 
 Disparate AI clips vary in color temperature, exposure, and texture. Post-production creates visual unity.
@@ -478,6 +509,126 @@ This single technique often accomplishes more than extensive per-clip correction
 
 ---
 
+## Surviving Social Platform Compression
+
+Generation artifacts invisible in production become obvious after TikTok or Instagram recompression.
+
+### Vulnerable Elements
+
+- Fine skin texture and pore detail
+- Subtle gradients with minimal contrast
+- Neon lighting and high-saturation color
+- Atmospheric effects: fog, smoke, rain particles
+
+### Defensive Measures
+
+Apply light film grain before export even if already graded—it provides texture for encoders to preserve rather than destroy.
+
+Increase contrast and midtone separation slightly. Compressed output flattens dynamic range; pre-compensation helps.
+
+Avoid pure black backgrounds. Encoder macroblocking becomes severe in low-complexity dark regions.
+
+### Export Strategy
+
+Set bitrate higher than platform recommendations. Allow the destination to compress downward from quality rather than uploading pre-degraded media.
+
+Never upload content that has already passed through lossy compression. Export from timeline at maximum quality; let the platform handle reduction.
+
+---
+
+## Quality Control Protocol
+
+Execute this checklist before declaring any clip complete. If any element fails, regenerate rather than patch.
+
+### Visual Verification
+
+| Element | Check For |
+| :--- | :--- |
+| Eye tracking | Consistent gaze, no micro-jumps between frames |
+| Dental stability | Teeth remain consistent, no frame-to-frame shifting |
+| Hand integrity | No partial disappearance, finger count stable |
+| Fabric behavior | Clothing folds don't crawl or shimmer unnaturally |
+| Background motion | No obvious loops, seamless environmental movement |
+
+### Audio Verification
+
+| Element | Check For |
+| :--- | :--- |
+| Consonant alignment | Lip shapes match hard sounds (p, b, t, d) |
+| Breath synchronization | Inhales correspond with visible chest movement |
+| Ambient scale | Room tone matches apparent environment size |
+| Music ducking | Volume automation doesn't expose AI noise floor |
+
+### Editorial Verification
+
+| Element | Check For |
+| :--- | :--- |
+| Cut motivation | Every edit serves purpose, no arbitrary transitions |
+| Camera intent | All movement has narrative justification |
+| Emotional clarity | Viewer identifies character state within 2 seconds |
+
+**Philosophy:** Regeneration costs less than repair. Patching compounds problems across the pipeline.
+
+---
+
+## Legal and Identity Considerations
+
+Photorealistic synthetic video enters regulated territory faster than most creators anticipate.
+
+### Likeness Protection
+
+Generating identifiable real individuals without explicit authorization creates liability. Public figures trigger platform enforcement regardless of intent. Fictional composite characters provide safer paths than "close enough" recreations.
+
+### Voice Authorization
+
+Written consent is strongly advisable for any cloned voice used commercially. Multiple platforms now embed invisible watermarks in generated audio. Commercial disputes frequently center on training data provenance and authorization chains.
+
+**Operating principle:** Treat AI-generated performers as actors requiring clearance. Apply identical documentation standards.
+
+---
+
+## Metadata and Provenance
+
+Invisible metadata gains importance quarterly as platforms and clients increase transparency requirements.
+
+### Documentation Practices
+
+- Preserve original generation timestamps
+- Archive prompt logs alongside output assets
+- Maintain plain-text provenance records per project
+
+**Rationale:** Clients and distribution platforms increasingly request verification of synthetic origin or workflow transparency. Proactive documentation prevents scrambling during review processes.
+
+---
+
+## Storage and Version Control
+
+AI video production consumes disk space aggressively. Unstructured storage creates chaos during revisions.
+
+### Recommended Directory Structure
+
+```
+Project/
+├─ 01_Source_Images/
+├─ 02_Reference_Video/
+├─ 03_Generations/
+│  ├─ v1_exploration/
+│  ├─ v2_selected/
+│  └─ v3_final/
+├─ 04_Audio/
+├─ 05_Upscaled/
+├─ 06_Edit/
+└─ prompts.txt
+```
+
+### Version Discipline
+
+Never overwrite generation outputs. Quality regressions infiltrate projects through version drift—a "quick fix" overwrites the working version, and recovery becomes impossible.
+
+Maintain clear separation between exploration, selection, and final renders. The cost of storage is trivial compared to regeneration time.
+
+---
+
 ## Automation Pipelines
 
 Recurring workflows benefit from automated file handling.
@@ -495,15 +646,40 @@ Runway and Google Veo both offer Zapier connectors.
 
 ---
 
-## Practical Notes
+## Recognizing AI Video Limitations
 
-**Regeneration beats correction.** No tool produces optimal output immediately. Budget for multiple passes—treat early results as exploration.
+Professional practice requires understanding where tools fail.
 
-**Aggregators for evaluation.** Test platforms under bundled subscriptions before individual commitments. Identify which tools match your specific requirements, then subscribe directly for better rates.
+### Unsuitable Applications
 
-**Composition determines ceiling.** Reference video framing and source image quality establish maximum achievable output. Technical prompting skill cannot compensate for poorly conceived foundations.
+| Scenario | Problem |
+| :--- | :--- |
+| Physical contact between multiple subjects | Interaction physics remain unreliable |
+| Precise prop continuity | Objects drift, disappear, or transform |
+| High legal exposure contexts | Risk may outweigh production speed gains |
+| Micro-expression dependent performance | Subtle acting nuance degrades in generation |
 
-**2026 additions worth attention:** Sora 2 for narrative work, Flux 2 Pro for source generation, Suno/Udio for original music, expanded Topaz suite for finishing.
+### Capability Alignment
+
+AI video excels at presence, atmosphere, and implication. It communicates mood effectively.
+
+It struggles with choreographed interaction, dense interpersonal blocking, and precise physical causality. Plan shots around these constraints rather than fighting them.
+
+---
+
+## Durable Principles
+
+Platforms cycle monthly. Foundational approaches persist.
+
+**Capture quality:** The cleanest possible reference material determines your ceiling. No tool compensates for degraded inputs.
+
+**Compositional commitment:** Lock framing decisions early. Mid-process reframing cascades problems through every downstream step.
+
+**Modular separation:** Treat body motion, facial animation, and voice as independent workstreams. Combining them is an editorial decision, not a generation constraint.
+
+**Regeneration economics:** Always assume generating fresh output costs less than repairing flawed output. Build schedules around iteration, not single-pass completion.
+
+This mindset transfers regardless of which platform dominates the next cycle.
 
 ---
 
