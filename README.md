@@ -2,32 +2,39 @@
 
 ![Midjourney](https://img.shields.io/badge/Midjourney-v7-blue?style=flat-square) ![Google Veo](https://img.shields.io/badge/Google-Veo_3.1-red?style=flat-square) ![Hailuo](https://img.shields.io/badge/Hailuo-Minimax-green?style=flat-square) ![Kling AI](https://img.shields.io/badge/Kling-2.6-purple?style=flat-square) ![Runway](https://img.shields.io/badge/Runway-Gen_4-yellow?style=flat-square) ![OpenAI Sora](https://img.shields.io/badge/OpenAI-Sora_2-orange?style=flat-square) ![Luma Dream Machine](https://img.shields.io/badge/Luma-Dream_Machine-teal?style=flat-square)
 
-> Real-world techniques for convincing synthetic video—tools shift constantly, but fundamentals persist.
+> Real-world techniques for convincing synthetic video, tools shift constantly, but fundamentals persist.
 
 ---
 
 ## Contents
 
 1. [Budget Realities](#budget-realities)
-2. [Building Source Images](#building-source-images)
-3. [Removing the AI Aesthetic](#removing-the-ai-aesthetic)
-4. [Animation Platforms](#animation-platforms)
-5. [Kling Motion Control In Depth](#kling-motion-control-in-depth)
-6. [Advanced Lip Synchronization](#advanced-lip-synchronization)
-7. [Voice Cloning Platforms](#voice-cloning-platforms)
-8. [Music Generation](#music-generation)
-9. [Audio Processing](#audio-processing)
-10. [Upscaling for Distribution](#upscaling-for-distribution)
-11. [Color and Frame Rate Discipline](#color-and-frame-rate-discipline)
-12. [Editorial Assembly](#editorial-assembly)
-13. [Surviving Social Platform Compression](#surviving-social-platform-compression)
-14. [Quality Control Protocol](#quality-control-protocol)
-15. [Legal and Identity Considerations](#legal-and-identity-considerations)
-16. [Metadata and Provenance](#metadata-and-provenance)
-17. [Storage and Version Control](#storage-and-version-control)
-18. [Automation Pipelines](#automation-pipelines)
-19. [Recognizing AI Video Limitations](#recognizing-ai-video-limitations)
-20. [Durable Principles](#durable-principles)
+2. [Credit Efficiency Strategies](#credit-efficiency-strategies)
+3. [Previsualization and Shot Discipline](#previsualization-and-shot-discipline)
+4. [Building Source Images](#building-source-images)
+5. [Removing the AI Aesthetic](#removing-the-ai-aesthetic)
+6. [Animation Platforms](#animation-platforms)
+7. [Secondary Motion and Style Platforms](#secondary-motion-and-style-platforms)
+8. [Kling Motion Control In Depth](#kling-motion-control-in-depth)
+9. [Advanced Lip Synchronization](#advanced-lip-synchronization)
+10. [Voice Cloning Platforms](#voice-cloning-platforms)
+11. [Music Generation](#music-generation)
+12. [Audio Processing](#audio-processing)
+13. [Upscaling for Distribution](#upscaling-for-distribution)
+14. [Camera Science Emulation](#camera-science-emulation)
+15. [Color and Frame Rate Discipline](#color-and-frame-rate-discipline)
+16. [AI Video Repair and Salvage](#ai-video-repair-and-salvage)
+17. [Face Repair and Temporal Cleanup](#face-repair-and-temporal-cleanup)
+18. [Editorial Assembly](#editorial-assembly)
+19. [Surviving Social Platform Compression](#surviving-social-platform-compression)
+20. [Quality Control Protocol](#quality-control-protocol)
+21. [Common Failure Patterns](#common-failure-patterns)
+22. [Legal and Identity Considerations](#legal-and-identity-considerations)
+23. [Metadata and Provenance](#metadata-and-provenance)
+24. [Storage and Version Control](#storage-and-version-control)
+25. [Automation Pipelines](#automation-pipelines)
+26. [Recognizing AI Video Limitations](#recognizing-ai-video-limitations)
+27. [Durable Principles](#durable-principles)
 
 ---
 
@@ -35,9 +42,62 @@
 
 Convincing output demands paid software. Free tiers serve for exploration, but visible defects accumulate quickly. Subscription models dominate this space.
 
-Bundled services like Higgsfield or Freepik provide multi-platform access under single fees—valuable for comparative testing before committing to individual tools.
+Bundled services like Higgsfield or Freepik provide multi-platform access under single fees, valuable for comparative testing before committing to individual tools.
 
 Recent arrival **Luma Dream Machine** warrants attention for rapid, high-fidelity clip generation.
+
+---
+
+## Credit Efficiency Strategies
+
+Generation credits represent real cost. Optimization prevents waste without sacrificing quality.
+
+### Core Principles
+
+- Generate motion at native resolution, upscale only once at the end
+- Never apply lip synchronization before final framing is locked
+- Batch similar shots across tools before committing to full generations
+- Avoid platform-native "enhancers" that duplicate Topaz results at higher credit cost
+- Test complex sequences with lower-tier models before committing to professional mode
+- Export test frames before full clip generation to verify composition
+
+### Workflow Sequencing
+
+```
+Lock framing → Test at low tier → Generate at full quality → Upscale once → Lip sync last
+```
+
+Reordering these steps wastes credits on content that gets discarded or regenerated.
+
+---
+
+## Previsualization and Shot Discipline
+
+AI video fails fastest when shot intent remains vague. Treating generation like VFX rather than photography prevents expensive iteration.
+
+### Why Previs Matters
+
+Teams that insert a previsualization layer before generation report 30-50% reduction in regeneration costs on narrative projects. Locked shot intent eliminates ambiguity that leads to wasted credits.
+
+### Storyboarding Tools
+
+| Platform | Capability |
+| :--- | :--- |
+| **Shotry AI** | AI storyboards with camera metadata |
+| **Boords AI** | Text-to-storyboard with shot continuity tracking |
+| **Kive.ai** | Visual reference boards for mood and palette consistency |
+| **Cinemashot** | Prompt-driven shot lists with lens and movement metadata |
+
+### Implementation
+
+Before generating any footage:
+
+1. Define camera angle, lens choice, and movement intent
+2. Create reference boards establishing color and lighting targets
+3. Map shot sequences with clear emotional and narrative purpose
+4. Test camera concepts with still generation before committing to video
+
+**Operating principle:** Lock shot intent before generation. Ambiguity multiplies cost.
 
 ---
 
@@ -78,6 +138,34 @@ Multiple angles of identical moments prove essential for editing flexibility.
 
 **Recommended:** Leonardo AI, Reve, NanoBanana Pro, Flux 2.0, SeeDream 4.0
 
+### NanoBanana, Micro-Realism and Facial Correction
+
+**NanoBanana** excels at subtle realism adjustments that most generators either ignore or overcorrect.
+
+**Primary strengths:**
+
+- Facial proportion correction without identity drift
+- Skin texture normalization without plastic smoothing
+- Eye alignment and asymmetry correction
+- Mouth and jawline stabilization for animation readiness
+
+Unlike traditional upscalers, NanoBanana operates more like a facial coherence pass than a resolution tool. It preserves lighting, expression, and character identity while correcting anatomical noise introduced during generation.
+
+**Best use cases:**
+
+- Preparing stills for animation in Kling or Hailuo
+- Fixing "almost right" faces before motion transfer
+- Cleaning portraits that will undergo lip synchronization
+- Repairing eyes and mouths before close-up dialogue shots
+
+**Workflow placement:**
+
+```
+Image Generation → NanoBanana → Topaz (optional) → Animation
+```
+
+**Important:** Apply NanoBanana before any motion generation. Applying it after animation risks temporal inconsistency.
+
 ### Vertical Reformatting
 
 Midjourney's Editor remains effective for intelligent 9:16 conversion. Flux handles outpainting with comparable quality for extending frames.
@@ -88,6 +176,9 @@ Midjourney's Omni Reference locks facial and costume details across generations.
 
 **Batch workflow:** Append `--r 5` in Midjourney for five simultaneous variations. Use `--weird 500` for improved creature/non-human rendering.
 
+> **Practitioner Insight**
+> If a face looks "almost human" but not quite, regenerate or repair before animation. Motion amplifies facial errors exponentially. NanoBanana is most effective when used as a preventative step, not a rescue tool.
+
 ---
 
 ## Removing the AI Aesthetic
@@ -96,7 +187,7 @@ Address the synthetic quality before animation compounds it.
 
 ### Portrait Enhancement
 
-**Enhancer.ai** introduces organic skin texture—pores, minor imperfections, natural variation.
+**Enhancer.ai** introduces organic skin texture, pores, minor imperfections, natural variation.
 
 **Topaz Photo AI** provides broader enhancement capabilities for comprehensive touch-up.
 
@@ -104,7 +195,25 @@ Address the synthetic quality before animation compounds it.
 
 **Topaz Gigapixel AI** remains the standard for 4x+ resolution increases on environments.
 
-**Mandatory:** Disable sharpening and noise reduction entirely—non-zero values create visible artifacts.
+**Mandatory:** Disable sharpening and noise reduction entirely, non-zero values create visible artifacts.
+
+### Facial Consistency Passes, NanoBanana vs Enhancers
+
+Traditional enhancers focus on sharpness and texture. NanoBanana focuses on structural believability.
+
+| Tool | Best At | Risk |
+| :--- | :--- | :--- |
+| Enhancer.ai | Organic skin texture | Over-softening |
+| Topaz Photo AI | Global cleanup | Over-sharpening |
+| **NanoBanana** | Facial anatomy correction | Overuse can neutralize expression |
+
+**Recommended approach:**
+
+- Use NanoBanana sparingly
+- One pass only
+- Avoid stacking with aggressive face enhancers
+
+NanoBanana shines when correcting subtle uncanny signals that viewers notice subconsciously but cannot articulate.
 
 ---
 
@@ -112,7 +221,7 @@ Address the synthetic quality before animation compounds it.
 
 Select based on specific shot requirements rather than general preference.
 
-### Kling AI 2.6 — Performance Transfer
+### Kling AI 2.6, Performance Transfer
 
 The dominant choice for controlled movement and character fidelity. Version 2.6's Motion Brush and Motion Control remain unmatched for precision work.
 
@@ -128,33 +237,81 @@ Mirror your original image prompt in Kling for consistency. Add `handheld camera
 | 2.5 Turbo | Quick tests, simple movement |
 | 2.1 / Master / 2.6 | Complex sequences, final output |
 
-### Google Veo 3.1 — Integrated Sound
+### Google Veo 3.1, Integrated Sound
 
 Generates extended clips with synchronized dialogue, ambient audio, and score baked in. Ideal for talking-head content where audio-visual unity matters.
 
 Enclose spoken lines in quotation marks within prompts for dialogue generation.
 
-### Hailuo Minimax — Physical Believability
+### Hailuo Minimax, Physical Believability
 
-Distinguished by weight and momentum in character movement—subjects feel grounded rather than floating through scenes. Strong likeness mapping from uploaded photographs.
+Distinguished by weight and momentum in character movement, subjects feel grounded rather than floating through scenes. Strong likeness mapping from uploaded photographs.
 
-### Runway Gen-4 — Style Conversion
+### Runway Gen-4, Style Conversion
 
 Transforms real footage into stylized output while preserving subject recognition across multiple generations. Best for real-to-synthetic workflows.
 
-### OpenAI Sora 2 — Narrative Coherence
+### OpenAI Sora 2, Narrative Coherence
 
 Excels at storytelling structure and long-form consistency. Strong remixing capabilities for iterating on existing content.
 
-### Luma Dream Machine — Speed Priority
+### Luma Dream Machine, Speed Priority
 
 Currently leads speed-to-quality metrics. Excellent physics simulation. Valuable for high-volume production where turnaround matters.
+
+### Additional Platforms Worth Knowing
+
+| Platform | Primary Use |
+| :--- | :--- |
+| **PixVerse** | Budget-friendly generation with decent quality |
+| **Wonder Studio** | AI character replacement in existing footage |
+| **Move.ai** | Markerless motion capture from video |
+| **DeepMotion** | AI mocap for non-human rigs |
+| **Unreal Engine 5** | Hybrid AI + real-time rendering pipeline |
+
+---
+
+## Secondary Motion and Style Platforms
+
+These tools serve specific niches rather than primary generation, but professionals use them heavily.
+
+### Pika Labs (v1.1+)
+
+Not a headline generator, but valuable for targeted work.
+
+**Strengths:**
+
+- Object-level motion edits
+- Background replacement and micro-animations
+- Lower experimentation cost than Kling
+
+**Position:** Secondary motion and repair, not primary generation.
+
+### Kaiber Flux
+
+Fell out of mainstream attention, but Flux mode remains heavily used for:
+
+- Music videos
+- Abstract transitions
+- Lyric-driven motion sequences
+
+Fits naturally alongside Runway for style conversion work.
+
+### Morph Studio
+
+Used extensively in:
+
+- Fashion content
+- Concept trailers
+- Character turntables
+
+Excels at slow, controlled motion where Kling can feel too literal. Strong for elegance over energy.
 
 ---
 
 ## Kling Motion Control In Depth
 
-Version 2.6's motion transfer represents a fundamental shift—full-body performance capture without specialized equipment.
+Version 2.6's motion transfer represents a fundamental shift, full-body performance capture without specialized equipment.
 
 ### Foundational Concept
 
@@ -204,7 +361,7 @@ Maximum clip duration: 30 seconds.
 ### Recording Reference Footage
 
 **Specifications:**
-- Length: 3–30 seconds
+- Length: 3-30 seconds
 - Subjects: Single person only
 - Camera: Stationary, no pans or zooms
 - Movement: Moderate speed, continuous
@@ -245,7 +402,7 @@ All clips maintain perfect synchronization since they share source timing. Drama
 
 **Implementation:**
 - Segment performances into 10-second chunks
-- Create 3–5 angle/environment variations per segment
+- Create 3-5 angle/environment variations per segment
 - Complete all generations before editing
 - Assemble with beat-matched cuts in DaVinci Resolve or Premiere
 
@@ -260,7 +417,7 @@ Text prompts affect:
 - Atmospheric elements
 - Camera behavior (Partial mode only)
 
-Subject motion derives entirely from reference video—prompts cannot override it.
+Subject motion derives entirely from reference video, prompts cannot override it.
 
 **Effective additions:**
 - "waves gently lapping, seabirds passing overhead"
@@ -269,7 +426,7 @@ Subject motion derives entirely from reference video—prompts cannot override i
 
 ### Capability Boundaries
 
-Motion Control reconstructs—it doesn't interpret or invent.
+Motion Control reconstructs, it doesn't interpret or invent.
 
 **Cannot:**
 - Generate movement beyond recorded reference
@@ -289,12 +446,12 @@ Motion Control reconstructs—it doesn't interpret or invent.
 
 ### Kling AI Lip Sync Workflow
 
-1. Generate base video (5–10 seconds, visible face in close-up)
+1. Generate base video (5-10 seconds, visible face in close-up)
 2. Activate "Match Mouth" for tracking analysis (~10 minutes processing)
 3. Upload isolated audio (clean vocal track)
 4. System handles singing and emotional variation through speech shape modeling
 
-**Note:** Slight frame offset common—correct in editorial software.
+**Note:** Slight frame offset common, correct in editorial software.
 
 ### Platform Comparison
 
@@ -338,7 +495,7 @@ Exceptional emotion control, rapid cloning from 15-second samples, strong multil
 | Tier | Monthly Cost |
 | :--- | :--- |
 | Free | Limited (commercial OK) |
-| Paid | $5–$330 (usage-based or flat) |
+| Paid | $5-$330 (usage-based or flat) |
 
 **Descript (Overdub)**
 Integrated editing environment, type-to-speak correction, podcast/video production focus.
@@ -346,8 +503,8 @@ Integrated editing environment, type-to-speak correction, podcast/video producti
 | Tier | Monthly Cost |
 | :--- | :--- |
 | Free | Limited features |
-| Creator | $15–16 |
-| Pro | $24–30/user |
+| Creator | $15-16 |
+| Pro | $24-30/user |
 | Enterprise | Custom |
 
 **Play.ht**
@@ -356,7 +513,7 @@ Extensive language coverage (100+), expressive cloning, fast generation for inte
 | Tier | Monthly Cost |
 | :--- | :--- |
 | Free | Limited |
-| Paid | $14–198 |
+| Paid | $14-198 |
 
 **Resemble AI**
 Real-time API access, security watermarking, developer and enterprise orientation.
@@ -381,9 +538,9 @@ Dubbing and localization specialty, voice preservation across language conversio
 
 | Tier | Monthly Cost |
 | :--- | :--- |
-| Creator | $50–60 |
+| Creator | $50-60 |
 | Pro | $120 |
-| Business | $500–750 |
+| Business | $500-750 |
 | Enterprise | Custom |
 
 ### Budget Alternatives
@@ -393,7 +550,7 @@ Dubbing and localization specialty, voice preservation across language conversio
 - **Coqui XTTS:** Open-source, self-hosted
 - **RVC:** Open-source voice conversion
 
-**Important:** Obtain consent for voice cloning. Pricing fluctuates—verify current rates.
+**Important:** Obtain consent for voice cloning. Pricing fluctuates, verify current rates.
 
 ---
 
@@ -457,6 +614,31 @@ Detail recovery above zero causes facial morphing. Leave disabled without except
 
 ---
 
+## Camera Science Emulation
+
+Real cameras have imperfections that AI never invents on its own. Emulating these characteristics masks synthetic motion and adds organic texture.
+
+### Film Response Tools
+
+| Platform | Function |
+| :--- | :--- |
+| **CineMatch AI** | DaVinci plugin matching digital cameras to film stock |
+| **Dehancer Pro** | Film response curves that mask AI motion artifacts |
+| **Filmbox** | Color science emulation, widely used in commercials |
+
+### Application Strategy
+
+Apply camera emulation after generation but before final color grade. These tools add:
+
+- Halation and bloom characteristics
+- Film grain with proper temporal behavior
+- Highlight rolloff that softens harsh AI edges
+- Color science inconsistencies that read as organic
+
+**Key insight:** AI output is mathematically perfect. Real footage is not. Introducing controlled imperfection improves believability.
+
+---
+
 ## Color and Frame Rate Discipline
 
 Generation platforms disagree on color science, gamma curves, and temporal handling. Uncorrected, these mismatches produce flicker, banding, and perceptual drift that survives even aggressive grading.
@@ -473,11 +655,68 @@ Assume **Rec.709 gamma 2.4** unless a platform explicitly documents otherwise. C
 
 ### Temporal Consistency
 
-Generate all clips at identical frame rates—**24fps or 30fps**, never mixed. Avoid platform-native variable frame rate exports entirely.
+Generate all clips at identical frame rates, **24fps or 30fps**, never mixed. Avoid platform-native variable frame rate exports entirely.
 
 If motion appears jittery post-generation, apply optical flow retiming only after upscaling completes. Retiming before upscaling compounds interpolation artifacts.
 
 **Sequencing rule:** Establish frame rate before lip synchronization. Correcting timing after sync destroys alignment.
+
+---
+
+## AI Video Repair and Salvage
+
+Generation is only half the job. A "failed" generation is often salvageable with repair tools, saving credits and time.
+
+### Motion Repair Tools
+
+| Tool | Function |
+| :--- | :--- |
+| **FlowFrames** | Optical flow smoothing |
+| **SVP Flow** | Motion cadence repair |
+| **Topaz Chronos** | Frame pacing correction |
+| **After Effects + RIFE** | Manual interpolation control |
+
+### When to Repair vs Regenerate
+
+**Repair when:**
+- Motion is mostly correct but has isolated jitter
+- Frame pacing is uneven but content is good
+- Minor interpolation artifacts exist
+
+**Regenerate when:**
+- Fundamental motion physics are wrong
+- Character identity drifts significantly
+- Multiple compounding issues exist
+
+**Philosophy:** Repair costs time. Regeneration costs credits. Choose based on which resource is more constrained.
+
+---
+
+## Face Repair and Temporal Cleanup
+
+Even high-end generators still drift on teeth, nasolabial folds, and eye symmetry. Post-generation facial stabilization has become standard practice.
+
+### Stabilization Tools
+
+| Tool | Function |
+| :--- | :--- |
+| **FaceFusion** | Temporal face stabilization |
+| **ReActor** | Frame-consistent face correction |
+| **EbSynth** | Style locking across frames |
+
+### Common Drift Points
+
+- Teeth shifting between frames
+- Eye symmetry fluctuation
+- Nasolabial fold inconsistency
+- Jawline instability during speech
+
+### Application Guidelines
+
+- Apply after generation, before final color
+- Use sparingly, over-correction creates new artifacts
+- Test on short segments before full clips
+- Maintain original as backup before any face manipulation
 
 ---
 
@@ -522,7 +761,7 @@ Generation artifacts invisible in production become obvious after TikTok or Inst
 
 ### Defensive Measures
 
-Apply light film grain before export even if already graded—it provides texture for encoders to preserve rather than destroy.
+Apply light film grain before export even if already graded, it provides texture for encoders to preserve rather than destroy.
 
 Increase contrast and midtone separation slightly. Compressed output flattens dynamic range; pre-compensation helps.
 
@@ -571,6 +810,25 @@ Execute this checklist before declaring any clip complete. If any element fails,
 
 ---
 
+## Common Failure Patterns
+
+Experience-based early warning signs that indicate specific problems.
+
+| Symptom | Likely Cause |
+| :--- | :--- |
+| Teeth morph mid-sentence | Over-aggressive lip sync settings |
+| Floating hands | Reference video framing mismatch |
+| Eye jitter | Face too small in frame during generation |
+| Texture crawl | Sharpening applied or HDR/SDR mixing |
+| Identity drift | Inconsistent reference images across shots |
+| Background loops | Clip duration exceeds model's temporal memory |
+| Hand count errors | Complex hand positioning in source image |
+| Clothing shimmer | Low-contrast fabric patterns |
+
+**Diagnostic approach:** When output fails, identify the symptom first. The cause determines whether to adjust inputs or switch tools.
+
+---
+
 ## Legal and Identity Considerations
 
 Photorealistic synthetic video enters regulated territory faster than most creators anticipate.
@@ -597,7 +855,24 @@ Invisible metadata gains importance quarterly as platforms and clients increase 
 - Archive prompt logs alongside output assets
 - Maintain plain-text provenance records per project
 
+### Platform Compliance Requirements
+
+| Standard | Purpose |
+| :--- | :--- |
+| **C2PA content credentials** | Cryptographic proof of synthetic origin |
+| **Platform AI labeling** | Required disclosure on major social platforms |
+| **Invisible watermark detection** | Automated identification of AI content |
+
+### Compliance Tools
+
+| Tool | Function |
+| :--- | :--- |
+| **Truepic** | Content authenticity certification |
+| **Adobe Content Credentials** | Embedded provenance metadata |
+
 **Rationale:** Clients and distribution platforms increasingly request verification of synthetic origin or workflow transparency. Proactive documentation prevents scrambling during review processes.
+
+**Awareness:** Major platforms (Meta, TikTok, YouTube) use detection heuristics that may flag unlabeled AI content. Disclosure practices vary by jurisdiction and continue evolving.
 
 ---
 
@@ -623,7 +898,7 @@ Project/
 
 ### Version Discipline
 
-Never overwrite generation outputs. Quality regressions infiltrate projects through version drift—a "quick fix" overwrites the working version, and recovery becomes impossible.
+Never overwrite generation outputs. Quality regressions infiltrate projects through version drift, a "quick fix" overwrites the working version, and recovery becomes impossible.
 
 Maintain clear separation between exploration, selection, and final renders. The cost of storage is trivial compared to regeneration time.
 
@@ -683,4 +958,4 @@ This mindset transfers regardless of which platform dominates the next cycle.
 
 ---
 
-*Verified January 2026. Platform capabilities shift rapidly—confirm current feature sets before production commitments.*
+*Verified January 2026. Platform capabilities shift rapidly, confirm current feature sets before production commitments.*
