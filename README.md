@@ -39,9 +39,8 @@
 
 ### Prompt Formula
 
-```
-[SUBJECT + ACTION] + [EMOTION] + [CAMERA/LIGHTING] + [ENVIRONMENT]
-```
+<img width="2816" height="1536" alt="Gemini_Generated_Image_cqcdwscqcdwscqcd" src="https://github.com/user-attachments/assets/bd7eadd3-aabf-4d44-8bf3-6493ddde07a5" />
+
 
 **Example:**
 ```
