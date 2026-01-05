@@ -163,7 +163,7 @@ Apply lip sync tool
 Recombine with instrumental in editor
 ```
 
-> ⚠️ **Never** feed a full music track to lip sync. Isolate vocals first.
+> ⚠️ **Never** feed a full music track to lip sync. Isolate vocals first. [Ultimate Vocal Removal](https://ultimatevocalremover.com/) is incredible and free.
 
 ### Kling Lip Sync Steps
 
@@ -216,7 +216,7 @@ Generate with isolated stems enabled
           ↓
 Feed vocal stem to lip sync
           ↓
-Recombine in DaVinci Resolve
+Recombine in Video Editor
 ```
 
 ---
