@@ -19,8 +19,7 @@
 
 > **The 80/20 Rule:** Your source image determines 80% of your final quality. Everything downstream is damage control.
 
-<img width="2816" height="1536" alt="Gemini_Generated_Image_mmku42mmku42mmku" src="https://github.com/user-attachments/assets/3ac71845-65bc-44f4-bef6-dda9bb90db65" />
-
+<img width="2816" height="534" alt="Gemini_Generated_Image_mmku42mmku42mmku" src="https://github.com/user-attachments/assets/f6aa214f-a87e-45a9-8b24-2f53c2d42436" />
 
 ---
 
@@ -39,8 +38,7 @@
 
 ### Prompt Formula
 
-<img width="2816" height="1536" alt="Gemini_Generated_Image_cqcdwscqcdwscqcd" src="https://github.com/user-attachments/assets/bd7eadd3-aabf-4d44-8bf3-6493ddde07a5" />
-
+<img width="2816" height="561" alt="Gemini_Generated_Image_cqcdwscqcdwscqcd" src="https://github.com/user-attachments/assets/aeb57517-6bd8-4e9c-8942-1a7b15fa360d" />
 
 **Example:**
 ```
