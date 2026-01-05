@@ -19,13 +19,8 @@
 
 > **The 80/20 Rule:** Your source image determines 80% of your final quality. Everything downstream is damage control.
 
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   IMAGE     │ →  │   REFINE    │ →  │   ANIMATE   │ →  │   AUDIO     │ →  │   FINISH    │
-│  Generate   │    │  Enhance    │    │   Motion    │    │ Voice/Music │    │  Upscale    │
-│  source     │    │  faces      │    │   + Lip     │    │  + Sync     │    │  + Grade    │
-└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
-```
+<img width="2816" height="1536" alt="Gemini_Generated_Image_mmku42mmku42mmku" src="https://github.com/user-attachments/assets/3ac71845-65bc-44f4-bef6-dda9bb90db65" />
+
 
 ---
 
