@@ -148,7 +148,7 @@ Turn one performance into a multi-camera edit:
 
 | Tool | Best For | Link |
 |:---|:---|:---|
-| **Kling Lip Sync** | Integrated with motion, handles singing | Built into Kling AI |
+| **Kling Lip Sync** | Integrated with motion, handles singing | [Built into Kling AI](https://app.klingai.com/global/video-to-lip/new) |
 | **Magic Hour** | Highest realism, extreme poses | [magichour.ai](https://magichour.ai) |
 | **HeyGen** | Avatars, multilingual | [heygen.com](https://www.heygen.com) |
 | **Sync.so** | Style learning, dialogue editing | [sync.so](https://sync.so) |
