@@ -421,26 +421,6 @@ Apply after generation, before final grade. Adds halation, grain, highlight roll
 
 ---
 
-## ⚖️ Legal & Metadata
-
-### Likeness Rules
-- Fictional composites safer than "close enough" recreations
-- Public figures trigger enforcement regardless of intent
-- Written consent required for commercial voice cloning
-
-### Provenance Documentation
-- Keep original generation timestamps
-- Archive prompts alongside assets
-- Maintain provenance text file per project
-
-### Compliance Tools
-| Tool | Purpose | Link |
-|:---|:---|:---|
-| **Truepic** | Content authenticity | [truepic.com](https://truepic.com) |
-| **Adobe Content Credentials** | Provenance metadata | [contentcredentials.org](https://contentcredentials.org) |
-
----
-
 # 🛠️ Tool Selector by Task
 
 ## Image Generation
